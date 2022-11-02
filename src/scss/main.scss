@@ -9,8 +9,14 @@ $dark-grey: #3e3e3e;
 $light-grey: #9e9e9e;
 
 body {
+  max-width: 1920px;
+  font-size: 14px;
+  line-height: 24px;
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+
   color: $dark-grey;
+  background-color: $bg;
 }
 
 .container {
@@ -19,6 +25,57 @@ body {
   margin: 0 auto;
 }
 
-.activation__wrap {
+.main {
+  padding-top: 212px;
+}
+
+.title {
+  margin-bottom: 45px;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 46px;
+  text-align: center;
+}
+
+.main__wrapper {
   display: flex;
+}
+.navigation {
+  width: 230px;
+  margin-right: 63px;
+}
+
+.navigation__item {
+  position: relative;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: left;
+  padding: 20px 0 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: rgba(42, 95, 203, 0.15);
+  }
+}
+
+.arrow {
+  display: none;
+  position: absolute;
+  content: "";
+  right: 0;
+  top: calc(50% - 7.5px);
+  width: 19px;
+  height: 15px;
+  background-image: url(../img/icon/arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.arrow--active {
+  display: block;
 }
