@@ -8,18 +8,18 @@
   <body>
     <main class="main">
       <div class="container">
-        <h1 class="title">Мои программы</h1>
         <div class="main__wrapper">
           <nav class="navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a href="#">Дашборд</a> <span class="arrow"></span>
+                <a href="./index.html">Дашборд</a> <span class="arrow"></span>
               </li>
               <li class="navigation__item">
                 <a href="#">Мои заказы</a><span class="arrow"></span>
               </li>
               <li class="navigation__item">
-                <a href="#">Мои программы</a><span class=" arrow arrow--active"></span>
+                <a href="#">Мои программы</a
+                ><span class="arrow arrow--active"></span>
               </li>
               <li class="navigation__item">
                 <a href="#">Учебный центр</a><span class="arrow"></span>
@@ -33,30 +33,33 @@
             </ul>
           </nav>
           <section class="section programs">
+            <h1 class="title">Мои программы</h1>
+
             <div class="programs__input">
               <input
+                class="input"
                 type="search"
                 name="search"
                 placeholder="Введите название"
               />
             </div>
-            <table>
+            <table cellspacing="0">
               <thead>
                 <tr>
-                  <th>Номер заказа</th>
-                  <th>Программа</th>
-                  <th>Действует до</th>
-                  <th>Скачать</th>
-                  <th>Руководство</th>
-                  <th>Статус</th>
+                  <th width="95">Номер заказа</th>
+                  <th width="245">Программа</th>
+                  <th width="134">Действует до</th>
+                  <th width="89">Скачать</th>
+                  <th width="80">Руководство</th>
+                  <th width="196">Статус</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>112192</td>
-                  <td>(2) Детский сад: Питание</td>
-                  <td>08.09.2022</td>
-                  <td>
+                  <td class="number red-circle">112192</td>
+                  <td class="name">(2) Детский сад: Питание</td>
+                  <td class="date date-red">08.09.2022</td>
+                  <td class="download">
                     <svg
                       width="33"
                       height="32"
@@ -77,7 +80,7 @@
                       />
                     </svg>
                   </td>
-                  <td>
+                  <td class="Guide">
                     <svg
                       width="24"
                       height="32"
@@ -91,13 +94,13 @@
                       />
                     </svg>
                   </td>
-                  <td>
-                    <p>Активировано (1)</p>
-                    <p>Не активировано (1)</p>
+                  <td class="status">
+                    <p class="status-active">Активировано (1)</p>
+                    <p class="status-not-activated">Не активировано (1)</p>
                   </td>
                 </tr>
-                <tr>
-                  <td colspan="6" class="activation">
+                <!-- <tr>
+                  <td colspan="6" class="activation" style="display: none">
                     <div class="activation__wrap">
                       <div class="activation__head">
                         <p>Доступно к активации: 2</p>
@@ -126,12 +129,12 @@
                       </div>
                     </div>
                   </td>
-                </tr>
+                </tr> -->
                 <tr>
-                  <td>112192</td>
-                  <td>(2) Детский сад: Питание</td>
-                  <td>08.09.2022</td>
-                  <td>
+                  <td class="number">112192</td>
+                  <td class="name">(2) Детский сад: Питание</td>
+                  <td class="date">08.09.2022</td>
+                  <td class="download">
                     <svg
                       width="33"
                       height="32"
@@ -152,7 +155,7 @@
                       />
                     </svg>
                   </td>
-                  <td>
+                  <td class="Guide">
                     <svg
                       width="24"
                       height="32"
@@ -166,16 +169,16 @@
                       />
                     </svg>
                   </td>
-                  <td>
-                    <p>Активировано (1)</p>
-                    <p>Не активировано (1)</p>
+                  <td class="status">
+                    <p class="status-active">Активировано (1)</p>
+                    <p class="status-not-activated">Не активировано (1)</p>
                   </td>
                 </tr>
                 <tr>
-                  <td>112192</td>
-                  <td>(2) Детский сад: Питание</td>
-                  <td>08.09.2022</td>
-                  <td>
+                  <td class="number">112192</td>
+                  <td class="name">(2) Детский сад: Питание</td>
+                  <td class="date">08.09.2022</td>
+                  <td class="download">
                     <svg
                       width="33"
                       height="32"
@@ -196,7 +199,7 @@
                       />
                     </svg>
                   </td>
-                  <td>
+                  <td class="Guide">
                     <svg
                       width="24"
                       height="32"
@@ -210,16 +213,16 @@
                       />
                     </svg>
                   </td>
-                  <td>
-                    <p>Активировано (1)</p>
-                    <p>Не активировано (1)</p>
+                  <td class="status">
+                    <p class="status-active">Активировано (1)</p>
+                    <p class="status-not-activated">Не активировано (1)</p>
                   </td>
                 </tr>
                 <tr>
-                  <td>112192</td>
-                  <td>(2) Детский сад: Питание</td>
-                  <td>08.09.2022</td>
-                  <td>
+                  <td class="number">112192</td>
+                  <td class="name">(2) Детский сад: Питание</td>
+                  <td class="date">08.09.2022</td>
+                  <td class="download">
                     <svg
                       width="33"
                       height="32"
@@ -240,7 +243,7 @@
                       />
                     </svg>
                   </td>
-                  <td>
+                  <td class="Guide">
                     <svg
                       width="24"
                       height="32"
@@ -254,16 +257,16 @@
                       />
                     </svg>
                   </td>
-                  <td>
-                    <p>Активировано (1)</p>
-                    <p>Не активировано (1)</p>
+                  <td class="status">
+                    <p class="status-active">Активировано (1)</p>
+                    <p class="status-not-activated">Не активировано (1)</p>
                   </td>
                 </tr>
                 <tr>
-                  <td>112192</td>
-                  <td>(2) Детский сад: Питание</td>
-                  <td>08.09.2022</td>
-                  <td>
+                  <td class="number">112192</td>
+                  <td class="name">(2) Детский сад: Питание</td>
+                  <td class="date">08.09.2022</td>
+                  <td class="download">
                     <svg
                       width="33"
                       height="32"
@@ -284,7 +287,7 @@
                       />
                     </svg>
                   </td>
-                  <td>
+                  <td class="Guide">
                     <svg
                       width="24"
                       height="32"
@@ -298,16 +301,16 @@
                       />
                     </svg>
                   </td>
-                  <td>
-                    <p>Активировано (1)</p>
-                    <p>Не активировано (1)</p>
+                  <td class="status">
+                    <p class="status-active">Активировано (1)</p>
+                    <p class="status-not-activated">Не активировано (1)</p>
                   </td>
                 </tr>
                 <tr>
-                  <td>112192</td>
-                  <td>(2) Детский сад: Питание</td>
-                  <td>08.09.2022</td>
-                  <td>
+                  <td class="number">112192</td>
+                  <td class="name">(2) Детский сад: Питание</td>
+                  <td class="date">08.09.2022</td>
+                  <td class="download">
                     <svg
                       width="33"
                       height="32"
@@ -328,7 +331,7 @@
                       />
                     </svg>
                   </td>
-                  <td>
+                  <td class="Guide">
                     <svg
                       width="24"
                       height="32"
@@ -342,14 +345,14 @@
                       />
                     </svg>
                   </td>
-                  <td>
-                    <p>Активировано (1)</p>
-                    <p>Не активировано (1)</p>
+                  <td class="status">
+                    <p class="status-active">Активировано (1)</p>
+                    <p class="status-not-activated">Не активировано (1)</p>
                   </td>
                 </tr>
               </tbody>
             </table>
-            <p>Показать еще</p>
+            <p class="show-else">Показать еще</p>
           </section>
         </div>
       </div>

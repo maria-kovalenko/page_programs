@@ -14,27 +14,27 @@ body {
   line-height: 24px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-
+  padding-top: 285px;
+  padding-bottom: 150px;
   color: $dark-grey;
   background-color: $bg;
 }
 
 .container {
-  max-width: 1138px;
+  max-width: 1168px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .main {
-  padding-top: 212px;
 }
 
 .title {
-  margin-bottom: 45px;
+  margin-bottom: 27px;
   font-size: 38px;
   font-weight: 600;
   line-height: 46px;
-  text-align: center;
+  text-align: left;
 }
 
 .main__wrapper {
@@ -42,7 +42,7 @@ body {
 }
 .navigation {
   width: 230px;
-  margin-right: 63px;
+  margin-right: 60px;
 }
 
 .navigation__item {
@@ -70,12 +70,132 @@ body {
   right: 0;
   top: calc(50% - 7.5px);
   width: 19px;
-  height: 15px;
+  height: 16px;
   background-image: url(../img/icon/arrow.png);
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .arrow--active {
   display: block;
+}
+
+.section {
+  margin-top: -71px;
+}
+
+.programs__input {
+  position: relative;
+  margin-bottom: 62px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: #c4c4c4;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: calc(50% - 12px);
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/icon/search.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.input {
+  width: 100%;
+  padding: 19.5px 27px 19.5px 32px;
+  background-color: transparent;
+  border: none;
+}
+
+table {
+  border-spacing: 0 15px;
+
+
+}
+
+th {
+      padding-bottom: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: $light-grey;
+  background-color: transparent;
+  background-color: $bg;
+}
+
+table tr {
+  background-color: #fff;
+  text-align: center;
+}
+
+td {
+  border-right: 1px solid #eeeeee;
+  padding: 0;
+  margin: 0;
+  height: 90px;
+  &:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  &:last-child {
+    border-radius: 0 10px 10px 0;
+    border: none;
+  }
+}
+
+.red-circle {
+position: relative;
+  &::before{
+  position: absolute;
+  content: '';
+  top: -3px;
+  left: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $orange;
+  }
+}
+.number {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.name {
+  font-weight: 500;
+}
+.date {
+  font-weight: 500;
+  line-height: 17px;
+  color: rgba(62, 62, 62, 0.5);
+}
+
+.date-red {
+  color: $orange;
+}
+
+.status {
+  font-weight: 500;
+}
+
+.status-active {
+  color: $green;
+}
+.status-not-activated {
+  color: #c4c4c4;
+}
+
+.show-else {
+font-weight: 500;
+line-height: 17px;
+text-align: right;
+color: #A5A5A5;
 }
