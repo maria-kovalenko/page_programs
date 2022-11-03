@@ -81,8 +81,7 @@ body {
   }
 }
 
-.arrow {
-  display: none;
+.navigation__item--active > .arrow {
   position: absolute;
   content: "";
   right: 0;
@@ -166,6 +165,7 @@ thead tr {
 }
 
 td {
+  position: relative;
   border-right: 1px solid #eeeeee;
   padding: 0;
   margin: 0;
@@ -180,7 +180,10 @@ td {
 }
 
 .red-circle {
-  position: relative;
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  cursor: pointer;
   &::before {
     position: absolute;
     content: "";
@@ -191,7 +194,38 @@ td {
     border-radius: 50%;
     background-color: $orange;
   }
+
+  &:hover {
+    .notice__bg {
+      display: block;
+    }
+    .notice__text {
+      display: block;
+    }
+  }
 }
+
+.notice__wrapper {
+  position: absolute;
+  width: 191px;
+  top: -49px;
+  left: -7px;
+}
+
+.notice__text {
+  display: none;
+  position: absolute;
+  top: 27px;
+  left: 49px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #a5a5a5;
+}
+.notice__bg {
+  display: none;
+}
+
 .number {
   font-size: 16px;
   font-weight: 600;
@@ -293,18 +327,55 @@ td {
 
 .icon-info {
   position: relative;
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    background-image: url(../img/icon/info.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor: pointer;
+.info-notice-icon {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  z-index: 3;
+  cursor: pointer;
+
+  &:hover {
+    .info-notice__wrapper {
+      display: block;
+    }
+  }
+}
+
+.info-notice-icon::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/icon/info.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.info-notice__wrapper {
+  display: none;
+  position: absolute;
+  top: -47px;
+  left: -12px;
+}
+
+.info-notice__text {
+  position: absolute;
+  top: 41px;
+  left: 55px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #a5a5a5;
+  p {
+    margin-bottom: 4px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -312,7 +383,7 @@ td {
   align-self: flex-end;
 }
 
-.activation__button-deactivate {
+.deactivate-button {
   background-color: #fff;
   color: $blue;
   border: 1px solid $blue;
@@ -323,18 +394,35 @@ td {
 }
 
 .modal {
-  position: relative;
+  position: fixed;
   width: 600px;
   margin: 0 auto;
   padding: 40px 45px;
   background-color: #fff;
   border-radius: 10px;
+}
+
+.modal-activation-code {
+  top: 100px;
+  left: calc(50% - 300px);
+  display: none;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0px;
+  right: -55px;
+  width: 45px;
+  height: 45px;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
 
   &::before {
     position: absolute;
     content: "";
     top: 15px;
-    right: -55px;
+    right: 0px;
     width: 45px;
     height: 3px;
     background-color: #fff;
@@ -346,7 +434,7 @@ td {
     position: absolute;
     content: "";
     top: 15px;
-    right: -55px;
+    right: 0px;
     width: 45px;
     height: 3px;
     background-color: #fff;
@@ -355,6 +443,11 @@ td {
 
     cursor: pointer;
   }
+}
+
+.modal-show {
+  display: block;
+  z-index: 5;
 }
 
 .modal__title {
@@ -396,23 +489,35 @@ td {
 .modal__code input {
   padding: 12px 9px;
   width: 30px;
-  
+
   background-color: transparent;
-  border: 1px solid #C4C4C4;
+  border: 1px solid #c4c4c4;
   border-radius: 5px;
   &::placeholder {
-    font-family: 'Montserrat';
-font-size: 16px;
-font-weight: 500;
-line-height: 20px;
-color: #C4C4C4;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #c4c4c4;
   }
 }
 
 .modal__button {
   background-color: #fff;
-  color: #C4C4C4;
-  border: 1px solid #C4C4C4;
+  color: #c4c4c4;
+  border: 1px solid #c4c4c4;
+}
+
+.layout-bg {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 0;
 }
 
 @media (max-width: 1400px) {
@@ -429,5 +534,8 @@ color: #C4C4C4;
 
   .title {
     font-size: 35px;
+  }
+  .number {
+    font-size: 14px;
   }
 }
