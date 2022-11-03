@@ -4,6 +4,7 @@ import "../../node_modules/focus-visible/dist/focus-visible";
 
 import "../scss/main.scss";
 import "../index.html";
-import "./activeMenu.js";
+import "./active_menu.js";
 import "./modal.js";
 import "./notification.js";
+import "./open_program.js";

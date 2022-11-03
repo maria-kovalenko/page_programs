@@ -96,6 +96,8 @@ body {
   display: block;
 }
 
+
+
 .section {
   margin-top: -71px;
 }
@@ -233,6 +235,10 @@ td {
 }
 .name {
   font-weight: 500;
+  cursor: pointer;
+  &:hover {
+    color: $blue;
+  }
 }
 .date {
   font-weight: 500;
@@ -265,7 +271,8 @@ td {
   background-color: transparent;
   cursor: pointer;
 }
-
+.activation {
+}
 .activation__head {
   text-align: left;
   padding: 46px 24px 45px;
