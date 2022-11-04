@@ -21,7 +21,8 @@ body {
 }
 
 .button {
-  padding: 12px 35px;
+  width: 194px;
+  padding: 12px 15px;
   border-radius: 50px;
   background-color: $blue;
   color: #fff;
@@ -63,7 +64,7 @@ body {
   font-size: 16px;
   line-height: 32px;
   text-align: left;
-  padding: 20px 0 20px;
+  padding: 20px 0 21px;
   cursor: pointer;
 
   &::before {
@@ -141,12 +142,12 @@ body {
   }
 }
 
-table {
-  border-spacing: 0 15px;
-}
-
 th {
-  padding-bottom: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 0;
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
@@ -156,15 +157,25 @@ th {
 }
 
 table tr {
+  display: grid;
+  grid-template-columns: 95px 245px 134px 89px 80px 196px;
+  height: auto;
+  margin-bottom: 20px;
   background-color: #fff;
   text-align: center;
   box-shadow: 0px 0px 30px rgba(238, 238, 238, 0.5);
+  border-radius: 10px;
 }
 thead tr {
+  margin-bottom: 4px;
+  min-height: 45px;
   box-shadow: none;
 }
 
 td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   border-right: 1px solid #eeeeee;
   padding: 0;
@@ -181,7 +192,8 @@ td {
 
 .red-circle {
   position: absolute;
-  top: 0px;
+  top: -1px;
+  left: -1px;
   z-index: 3;
   cursor: pointer;
   &::before {
@@ -248,6 +260,7 @@ td {
 }
 
 .status {
+  flex-direction: column;
   font-weight: 500;
 }
 
@@ -268,6 +281,24 @@ td {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.no-margin {
+  margin-bottom: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.activation {
+  margin-top: -21px;
+
+  border-radius: 0;
+}
+
+.activation td {
+  display: block;
+  height: auto;
+  grid-column: 1/7;
 }
 
 .activation__head {
@@ -388,6 +419,7 @@ td {
 }
 
 .deactivate-button {
+  width: 189px;
   background-color: #fff;
   color: $blue;
   border: 1px solid $blue;
@@ -521,7 +553,7 @@ td {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
 
-  z-index: 0;
+  z-index: 2;
 }
 
 @media (max-width: 1400px) {
