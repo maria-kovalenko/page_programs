@@ -235,4 +235,7 @@ function createRow() {
   button.onclick = handlerButtonModalOpen;
   return nodeRow;
 }
+
+let button = document.querySelector(".request-code");
+button.onclick = handlerButtonModalOpen;
 handlerButtonModalClose();
