@@ -53,6 +53,7 @@ body {
 
 .main__wrapper {
   display: flex;
+  justify-content: space-between;
 }
 .navigation {
   width: 230px;
@@ -86,8 +87,8 @@ body {
   position: absolute;
   content: "";
   right: 0;
-  top: calc(50% - 7.5px);
-  width: 19px;
+  top: calc(50% - 9px);
+  width: 13px;
   height: 16px;
   background-image: url(../img/icon/arrow.png);
   background-repeat: no-repeat;
@@ -170,6 +171,7 @@ thead tr {
   margin-bottom: 4px;
   min-height: 45px;
   box-shadow: none;
+  background-color: transparent;
 }
 
 td {
@@ -281,6 +283,10 @@ td {
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  &:hover {
+    color: #838383;
+  }
 }
 
 .no-margin {
@@ -562,10 +568,16 @@ td {
     padding-bottom: 90px;
   }
 }
+
 @media (max-width: 1100px) {
   .navigation {
     width: 206px;
     margin-right: 35px;
+  }
+
+  table tr {
+    display: grid;
+    grid-template-columns: 95px 200px 109px 89px 95px 171px;
   }
 
   .title {
