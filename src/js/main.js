@@ -5,4 +5,4 @@ import "../../node_modules/focus-visible/dist/focus-visible";
 import "../scss/main.scss";
 import "../index.html";
 import "./active_menu.js";
-import "./modal.js";
+import "./expand_row.js";
